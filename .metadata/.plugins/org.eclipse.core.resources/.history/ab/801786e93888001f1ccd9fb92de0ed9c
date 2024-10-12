@@ -1,0 +1,73 @@
+package com.cibertec.app.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
+
+import com.cibertec.app.entity.Inventario;
+import com.cibertec.app.repository.InventarioRepository;
+
+import com.cibertec.app.service.InventarioService;
+
+@Controller
+public class InventarioController {
+
+	@Autowired
+	private InventarioService service;
+
+	@GetMapping("/inventario")
+	public String listInventario(Model model) {
+	    model.addAttribute("inventario", service.getAllInventario());
+	    return "inventario/index";
+	}  
+	    
+	@GetMapping("/inventario/new")
+	public String createClienteForm(Model model){
+	    // este objeto Cliente almacenara los valores 
+	  	Inventario inventario = new Inventario();
+	    model.addAttribute("inventario", inventario);
+	    return "inventario/create";
+	}
+		
+	@PostMapping("/inventario")
+	public String saveInventario(@ModelAttribute("inventario") Inventario inventario) {
+	    service.saveInventario(inventario);
+	    return "redirect:/inventario";
+	}	
+	 
+	@GetMapping("/inventario/edit/{id}")
+	public String editClienteForm(@PathVariable Integer id, Model model) {
+	    Inventario st = service.findInventarioByNro(id);
+	    model.addAttribute("inventario", st);
+	    return "inventario/edit";
+	}
+	
+	@PostMapping("/inventario/{id}")
+	public String updateInventario(@PathVariable Integer id, 
+	    @ModelAttribute("inventario") Inventario inventario, Model model) {
+	    //sacar el estudiante de la b.d. por el id
+	    Inventario existentInventario = service.findInventarioByNro(id);
+	    // cargarlo
+	    existentInventario.setNroInventario(id);
+	    existentInventario.setFecha();
+	    existentInventario.setIdProd(0);
+	    existentInventario.setCostoIngreso();
+	    
+	    // guardar el estudiante actualizado
+	    service.updateInventario(existentInventario);
+	    return "redirect:/inventario";
+	}    
+	
+	@GetMapping("/inventario/{id}")
+	public String deleteInventario(@PathVariable Integer id) {
+	    service.saveInventario(id);
+	    return "redirect:/inventario";
+	}	
+	
+	
+}

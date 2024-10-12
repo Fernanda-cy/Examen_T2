@@ -1,0 +1,10 @@
+package com.cibertec.app;
+
+public class BdT2InventarioApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

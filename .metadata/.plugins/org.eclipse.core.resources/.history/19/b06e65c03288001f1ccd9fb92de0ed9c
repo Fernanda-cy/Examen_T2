@@ -1,0 +1,10 @@
+package com.cibertec.app.service.impl;
+
+import java.util.List;
+
+public class InventarioServiceImpl  {
+
+	
+	
+	
+}
