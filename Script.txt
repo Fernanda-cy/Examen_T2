@@ -1,0 +1,37 @@
+Create database  BD_T2_APELLIDO;
+ 
+ use BD_T2_APELLIDO;
+ 
+ create table categoria (
+ id_cate int primary key ,
+ descripcion varchar(100) not null,
+ frecuencia_compra int
+ );
+ 
+ create table producto(
+ id_prod int primary key auto_increment,
+ nom_prod varchar(100) not null,
+ id_cate int,
+ stock_actual int not null,
+ foreign key (id_cate) references categoria(id_cate)
+ );
+ 
+create table inventario(
+nro_inventario int primary key auto_increment,
+fecha date not null,
+id_prod int,
+costo_ingreso decimal(10,2) not null,
+foreign key (id_prod) references producto(id_prod)
+);
+
+insert into categoria (id_cate, descripcion, frecuencia_compra)
+values ('1','Muebles','20'),
+       ('2','Electronica','30');
+       
+insert into producto(id_prod,nom_prod,id_cate,stock_actual)
+values('1','Mesa','1','100'),
+      ('2','Laptop','2',50);
+      
+insert into inventario(fecha,id_prod,costo_ingreso)
+values('2024-10-9','1','400'),
+      ('2024-10-10','2','1800');
