@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.JoinColumn"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowire"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.entity.Categoria"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.repository.CategoriaRepository"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.entity.Inventario"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.repository.InventarioRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.SpringBootApplication"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.repository.ProductoRepository"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.entity.Producto"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.service.InventarioService"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.service.ProductoService"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.service.CategoriaService"/>
+    <fullyQualifiedTypeName name="com.cibertec.app.LpiiExament2Application"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+</qualifiedTypeNameHistroy>
